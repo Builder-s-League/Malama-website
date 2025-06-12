@@ -1,6 +1,6 @@
 'use client'
 
-import AnimatedElement from '../components/animated-element'
+import AnimatedElement from '@/components/animated-element'
 import Link from 'next/link'
 
 export default function Home() {
