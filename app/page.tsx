@@ -1,237 +1,164 @@
-import { Navbar } from "@/components/navbar"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Heart, Shield, Users } from "lucide-react"
-import Image from "next/image"
-import Footer from "@/components/Footer";
+'use client'
 
-export default function Page() {
+import AnimatedElement from '../components/animated-element'
+import Link from 'next/link'
+
+export default function Home() {
   return (
-      <div className="min-h-screen">
-        <Navbar/>
+    <main className="bg-white">
+      <AnimatedElement>
+        <section className="bg-[#f5f7fa] px-6 py-20">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="relative w-full max-w-md mx-auto">
+              <div className="w-full aspect-square overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000"
+                  alt="Michelle - Nurse"
+                  className="w-full h-full object-cover object-center [clip-path:url(#blobClipPath)]"
+                />
+              </div>
+              <svg width="0" height="0">
+                <defs>
+                  <clipPath id="blobClipPath" clipPathUnits="objectBoundingBox">
+                    <path d="M0.78,0.13 C0.9,0.3,1,0.5,0.91,0.66 C0.82,0.82,0.57,0.96,0.35,0.94 C0.13,0.92,-0.08,0.74,0.01,0.52 C0.1,0.3,0.66,-0.05,0.78,0.13 Z" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
 
-        {/* Hero Section */}
-        <section
-            className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-[#f8f9fa] to-[#e9ecef] dark:from-[#191718] dark:to-[#302324]">
-          <div className="container mx-auto px-4 py-16">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <Badge className="bg-[#23a6f0] text-white">Professional Healthcare</Badge>
-                <h1 className="text-4xl lg:text-6xl font-bold text-[#191718] dark:text-white leading-tight">
-                  Extraordinary health situation? <span className="text-[#4b7b9a]">I can help!</span>
-                </h1>
-                <p className="text-lg text-muted-foreground max-w-md">
-                  I help those in extraordinary medical situations where common solutions are not enough. Professional
-                  nursing care with over 30 years of experience.
-                </p>
-                <Button size="lg" className="bg-[#23a6f0] hover:bg-[#4b7b9a] text-white">
-                  Contact Me
-                </Button>
-              </div>
-              <div className="relative">
-                <div className="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-[#4b7b9a]">
-                  <Image
-                      src="/images/hero-image.jpg"
-                      alt="Professional nurse Michelle"
-                      width={320}
-                      height={320}
-                      className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+            <div className="space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+                <span className="block">Extraordinary health situation?</span>
+                <span className="block text-brand">I can help!</span>
+              </h2>
+              <p className="text-gray-700">
+                When life throws medical challenges your way, we step in with personalized support, compassion, and care. You're not alone — we’re here to help you take the next step.
+              </p>
+              <Link
+                href="/form"
+                className="inline-block bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-6 py-3 rounded-md transition"
+              >
+                Contact Me
+              </Link>
             </div>
           </div>
         </section>
+      </AnimatedElement>
+      <section className="px-6 py-20">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="space-y-6">
+            <h1 className="text-4xl font-extrabold text-gray-900">About Us</h1>
+            <p className="text-gray-700 leading-relaxed">
+              Michelle is a professional nurse with 30+ years of hands-on experience. She has helped hundreds of clients navigate the healthcare system and find real solutions to complex issues.
+            </p>
+            <p className="text-gray-700">
+              We specialize in supporting people when they feel lost, overwhelmed, or forgotten by the system. With compassion and deep medical knowledge, we bring direction and peace of mind.
+            </p>
 
-        {/* About Section */}
-        <section id="about" className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-3 gap-4 mt-6">
               <div>
-                <h2 className="text-3xl font-bold mb-6 text-[#191718] dark:text-white">About Us</h2>
-                <p className="text-muted-foreground mb-6">
-                  Michelle is a professional nurse with 30+ years of experience. We help those in extraordinary medical
-                  situations where common solutions are not enough.
-                </p>
-                <p className="text-muted-foreground mb-8">
-                  Hundreds of clients across Canada have received personalized solutions and compassionate care.
-                </p>
-
-                <div className="grid grid-cols-3 gap-6 mb-8">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-[#4b7b9a]">30+</div>
-                    <div className="text-sm text-muted-foreground">Years of Experience</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-[#4b7b9a]">1000+</div>
-                    <div className="text-sm text-muted-foreground">People Helped</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-[#4b7b9a]">100%</div>
-                    <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
-                  </div>
-                </div>
-
-                <Button className="bg-[#633b48] hover:bg-[#4b7b9a] text-white">Schedule a Call</Button>
+                <p className="text-2xl font-bold text-gray-900">30+</p>
+                <p className="text-sm text-gray-500">Years of Experience</p>
               </div>
-              <div className="relative">
-                <div className="w-80 h-80 mx-auto rounded-lg overflow-hidden">
-                  <Image
-                      src="/images/hero-image.jpg"
-                      alt="About Michelle"
-                      width={320}
-                      height={320}
-                      className="w-full h-full object-cover"
-                  />
-                </div>
+              <div>
+                <p className="text-2xl font-bold text-gray-900">1000+</p>
+                <p className="text-sm text-gray-500">People Helped</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-gray-900">50+</p>
+                <p className="text-sm text-gray-500">Special Medical Cases</p>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Values Section */}
-        <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-[#191718] dark:text-white">Our Values</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Our vision and focus to care. Medical security is important. Empathy derived from lived experience.
+            <Link
+              href="/services"
+              className="inline-block mt-8 bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition"
+            >
+              Explore Our Services
+            </Link>
+          </div>
+
+          <div className="w-full flex justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000"
+              alt="Michelle - Nurse"
+              className="w-full max-w-md rounded-2xl shadow-md object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f5f7fa] px-6 py-20">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="relative w-full max-w-md mx-auto">
+            <div className="w-full aspect-square overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000"
+                alt="Michelle - Nurse"
+                className="w-full h-full object-cover object-center [clip-path:url(#blobClipPath)]"
+              />
+            </div>
+            <svg width="0" height="0">
+              <defs>
+                <clipPath id="blobClipPath" clipPathUnits="objectBoundingBox">
+                  <path d="M0.82,0.17 C0.94,0.31,1,0.5,0.89,0.66 C0.78,0.83,0.52,0.95,0.31,0.91 C0.1,0.87,-0.05,0.68,0.02,0.48 C0.09,0.27,0.7,-0.03,0.82,0.17 Z" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+              <span className="block">Our Mission</span>
+              <span className="block text-brand">To Be the Hand That Helps</span>
+            </h2>
+            <p className="text-gray-700">
+              We stand beside people facing overwhelming medical challenges — when the system feels too complex or too slow. With empathy and action, we provide a guiding hand to help them find hope, clarity, and healing.
+            </p>
+
+            <Link
+              href="/cases"
+              className="inline-block bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-6 py-3 rounded-md transition"
+            >
+              Check Out Our Cases
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-20 bg-white">
+        <div className="max-w-6xl mx-auto text-center space-y-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            How We Help
+          </h2>
+          <p className="max-w-2xl mx-auto text-gray-600">
+            Every person’s situation is unique. Here’s how we support people facing complex medical needs.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-brand mb-2">1. Personal Consultation</h3>
+              <p className="text-sm text-gray-600">
+                We meet you where you are — physically, emotionally, and medically — to understand your situation and needs.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Heart className="w-12 h-12 text-[#4b7b9a] mx-auto mb-4"/>
-                  <h3 className="text-xl font-semibold mb-2">Compassionate Care</h3>
-                  <p className="text-muted-foreground">
-                    Providing empathetic support during challenging health situations.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-brand mb-2">2. Medical Advocacy</h3>
+              <p className="text-sm text-gray-600">
+                We help communicate with healthcare providers and specialists, ensuring your voice is heard and your rights respected.
+              </p>
+            </div>
 
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Shield className="w-12 h-12 text-[#4b7b9a] mx-auto mb-4"/>
-                  <h3 className="text-xl font-semibold mb-2">Medical Security</h3>
-                  <p className="text-muted-foreground">Ensuring safety and security in all medical interventions.</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Users className="w-12 h-12 text-[#4b7b9a] mx-auto mb-4"/>
-                  <h3 className="text-xl font-semibold mb-2">Lived Experience</h3>
-                  <p className="text-muted-foreground">
-                    Drawing from real-world experience to provide practical solutions.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="p-6 border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition">
+              <h3 className="text-xl font-semibold text-brand mb-2">3. Tailored Support Plan</h3>
+              <p className="text-sm text-gray-600">
+                We build a customized plan to guide you step by step toward stability, health, and hope.
+              </p>
             </div>
           </div>
-        </section>
-
-        {/* Mission Section */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <div className="inline-block bg-muted px-8 py-3 rounded-full mb-6">
-                <h2 className="text-2xl font-bold text-[#191718] dark:text-white">OUR MISSION</h2>
-              </div>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <p className="text-lg">
-                  Michelle with her 40 years of experience is here for providing support that your loved ones needs to
-                  stay healthy and monitored.
-                </p>
-                <p className="text-lg">Meet the Manitoba wide consultants.</p>
-                <p className="text-lg">Based in Heart of Canada Winnipeg Manitoba.</p>
-                <p className="text-lg">Get supportive needs in your area.</p>
-                <p className="text-lg">No more waiting or commuting long distance on a cold Canada Day.</p>
-              </div>
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-4 text-[#4b7b9a]">Meet Michelle</h3>
-                <div className="w-64 h-64 mx-auto rounded-lg overflow-hidden">
-                  <Image
-                      src="/images/hero-image.jpg"
-                      alt="Meet Michelle"
-                      width={256}
-                      height={256}
-                      className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Consultation CTA */}
-        <section
-            id="testimonials"
-            className="py-16 relative bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/consultation-bg.jpg')" }}
-        >
-          <div className="absolute inset-0 bg-black/40"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-md mx-auto text-center">
-              <div className="bg-white/90 dark:bg-black/90 p-8 rounded-2xl">
-                <h2 className="text-3xl font-bold mb-2 text-black dark:text-white">
-                  I'm ready to <span className="underline decoration-[#4b7b9a]">listen</span>.
-                </h2>
-                <Button size="lg" className="mt-6 bg-[#4b7b9a] hover:bg-[#23a6f0] text-white">
-                  Book a consultation
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonial */}
-        <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <Card>
-                <CardContent className="p-8">
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div className="space-y-4">
-                      <p className="text-lg italic">
-                        "I would like to take a few moments to express my deep gratitude to Nurse Michelle. She was like
-                        an angel during a very critical time when we desperately needed help caring for our first child,
-                        who was suffering from a rare illness."
-                      </p>
-                      <p className="text-lg italic">
-                        "Michelle cared for our baby every single day for 8 hours, without ever showing signs of fatigue
-                        or neglect."
-                      </p>
-                      <p className="text-lg italic">
-                        "I honestly can't imagine how I would've made it through that difficult period without her support
-                        and care."
-                      </p>
-                      <p className="text-lg italic">"All my heartfelt thanks and appreciation to Michelle."</p>
-                      <p className="font-semibold text-[#4b7b9a]">- Basher, Hassna, and Tarek Alker</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="w-48 h-48 mx-auto rounded-full overflow-hidden">
-                        <Image
-                            src="/placeholder.svg?height=192&width=192"
-                            alt="Happy family testimonial"
-                            width={192}
-                            height={192}
-                            className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        <Footer/>
-      </div>
+        </div>
+      </section>
+    </main>
   )
 }
