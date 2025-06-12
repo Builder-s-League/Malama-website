@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@layer utilities {
+    .bg-brand {
+        background-color: #633B48;
+    }
+
+    .hover\:bg-brand-dark:hover {
+        background-color: #4F2E3A;
+    }
+
+    .text-brand {
+        color: #633B48;
+    }
+
+    .border-brand {
+        border-color: #633B48;
+    } }
