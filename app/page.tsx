@@ -2,9 +2,9 @@ import { Navbar } from "@/components/navbar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Shield, Users } from "lucide-react"
 import Image from "next/image"
 import Footer from "@/components/Footer";
+import OurValues from "@/components/OurValues";
 
 export default function Page() {
   return (
@@ -91,46 +91,7 @@ export default function Page() {
         </section>
 
         {/* Values Section */}
-        <section className="py-16 bg-muted/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-[#191718] dark:text-white">Our Values</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Our vision and focus to care. Medical security is important. Empathy derived from lived experience.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Heart className="w-12 h-12 text-[#4b7b9a] mx-auto mb-4"/>
-                  <h3 className="text-xl font-semibold mb-2">Compassionate Care</h3>
-                  <p className="text-muted-foreground">
-                    Providing empathetic support during challenging health situations.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Shield className="w-12 h-12 text-[#4b7b9a] mx-auto mb-4"/>
-                  <h3 className="text-xl font-semibold mb-2">Medical Security</h3>
-                  <p className="text-muted-foreground">Ensuring safety and security in all medical interventions.</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Users className="w-12 h-12 text-[#4b7b9a] mx-auto mb-4"/>
-                  <h3 className="text-xl font-semibold mb-2">Lived Experience</h3>
-                  <p className="text-muted-foreground">
-                    Drawing from real-world experience to provide practical solutions.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        <OurValues/>
 
         {/* Mission Section */}
         <section className="py-16 bg-background">
