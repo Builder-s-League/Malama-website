@@ -9,8 +9,6 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <Navbar />
-
-      {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-[#f8f9fa] to-[#e9ecef] dark:from-[#191718] dark:to-[#302324]">
         <div className="container mx-auto px-4 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
