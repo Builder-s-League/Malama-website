@@ -1,12 +1,6 @@
-import { Navbar } from "@/components/navbar"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import Image from "next/image"
-import Footer from "@/components/Footer";
-import OurValues from "@/components/OurValues";
-'use client'
+'use client';
 
+import OurValues from "../components/OurValues";
 import AnimatedElement from '../components/animated-element'
 import Link from 'next/link'
 
@@ -95,8 +89,8 @@ export default function Home() {
         </div>
       </section>
 
-        {/* Values Section */}
-        <OurValues/>
+      {/* Values Section */}
+      <OurValues/>
 
       <section className="px-6 py-20 bg-white">
         <div className="max-w-6xl mx-auto text-center space-y-10">

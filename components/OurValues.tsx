@@ -9,7 +9,7 @@ export default function OurValues() {
             <div className="flex justify-center lg:justify-start">
               <div className="relative w-full max-w-md">
                 <Image
-                    src="our-values.png"
+                    src="/our-values.png"
                     alt="Smiling woman in floral dress outdoors"
                     width={500}
                     height={600}
