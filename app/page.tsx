@@ -1,5 +1,6 @@
-'use client'
+'use client';
 
+import OurValues from "../components/OurValues";
 import AnimatedElement from '../components/animated-element'
 import Link from 'next/link'
 
@@ -88,43 +89,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#f5f7fa] px-6 py-20">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="relative w-full max-w-md mx-auto">
-            <div className="w-full aspect-square overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000"
-                alt="Michelle - Nurse"
-                className="w-full h-full object-cover object-center [clip-path:url(#blobClipPath)]"
-              />
-            </div>
-            <svg width="0" height="0">
-              <defs>
-                <clipPath id="blobClipPath" clipPathUnits="objectBoundingBox">
-                  <path d="M0.82,0.17 C0.94,0.31,1,0.5,0.89,0.66 C0.78,0.83,0.52,0.95,0.31,0.91 C0.1,0.87,-0.05,0.68,0.02,0.48 C0.09,0.27,0.7,-0.03,0.82,0.17 Z" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-              <span className="block">Our Mission</span>
-              <span className="block text-brand">To Be the Hand That Helps</span>
-            </h2>
-            <p className="text-gray-700">
-              We stand beside people facing overwhelming medical challenges — when the system feels too complex or too slow. With empathy and action, we provide a guiding hand to help them find hope, clarity, and healing.
-            </p>
-
-            <Link
-              href="/cases"
-              className="inline-block bg-brand hover:bg-brand-dark text-white text-sm font-semibold px-6 py-3 rounded-md transition"
-            >
-              Check Out Our Cases
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Values Section */}
+      <OurValues/>
 
       <section className="px-6 py-20 bg-white">
         <div className="max-w-6xl mx-auto text-center space-y-10">
